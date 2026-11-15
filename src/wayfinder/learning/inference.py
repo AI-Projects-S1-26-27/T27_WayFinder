@@ -1,5 +1,4 @@
-"""Search-time inference: a numpy port of the trained network with cached embedding projections.
-
+"""
 The first layer is linear in its inputs, so ``W1 x = W1_v e_v + W1_t e_t + W1_w w + W1_o offset``.
 ``W1_v e_v`` and ``W1_t e_t`` are precomputed once for every node (the cached embeddings), the weight
 and target terms once per query, and only the 3-dimensional offset term and the remaining layers are
