@@ -177,7 +177,7 @@ Search states are `(node, incoming edge)` pairs, so turns can be priced.
 
 ## Results
 
-**Full project report:** [`docs/report/REPORT.md`](docs/report/REPORT.md) (PDF: [`docs/report/WayFinder_Report.pdf`](docs/report/WayFinder_Report.pdf)).
+**Full project report:** [`docs/report/REPORT.md`](docs/report/REPORT.md) (PDF: [`docs/report/REPORT.pdf`](docs/report/REPORT.pdf)).
 Full tables, with the file behind every number: **[`results/summary.md`](results/summary.md)**. On the 200 frozen queries:
 
 * **Correctness.** Dijkstra, A\*(h_adm) and A\*(h\*) agree on every optimum. `h_adm` has zero admissibility and
@@ -197,8 +197,8 @@ Full tables, with the file behind every number: **[`results/summary.md`](results
   `python scripts/verify_routes.py`.
 * **User study (not yet run).** The proposal plans a small human evaluation. Everything for it is ready: 12 trials,
   4 per profile, in `data/user_study/`, and the `/study` page. No responses have been collected, so no agreement rate is
-  reported. Run it with any number of people, then `python -m wayfinder study-analyze`. Report §10 gives an objective
-  check of the same trials: profile routes improve their target property at a 7–9 % mean detour.
+  reported. Run it with any number of people, then `python -m wayfinder study-analyze`. The trials themselves give an
+  objective check: profile routes improve their target property at a 7–9 % mean detour (`data/user_study/trials.csv`).
 
 Figures are in `results/plots/`: `problem_curve.png`, `expansions_vs_W.png`, `bound_guaranteed_vs_achieved.png`,
 `informedness_hist.png`, `generalisation.png`, `latency.png`, `training_curves.png`.
@@ -218,10 +218,9 @@ WayFinder/
 ├── configs/default.yaml           every pipeline setting (seeds, sizes, hyperparameters, paths)
 ├── data/                          graph, frozen splits and benchmark, labels, embeddings, study trials (data/README.md)
 ├── docs/
-│   ├── report/                    REPORT.md + WayFinder_Report.pdf (the full project report)
+│   ├── report/                    REPORT.md + REPORT.pdf (the full project report)
 │   ├── IMPLEMENTATION_PLAN.md     every proposal item mapped to its code and result file
-│   ├── ai_usage_log.md            AI-usage disclosure
-│   └── progress_log.md            weekly gates
+│   └── ai_usage_log.md            AI-usage disclosure
 ├── models/                        3 trained heuristic checkpoints, tuned classical fallback, chosen hyperparameters
 ├── results/                       all result tables and figures, summary.md; results/audit/ = pre-project data audit
 ├── scripts/
@@ -303,8 +302,8 @@ pass an override file: `python -m wayfinder --config my.yaml evaluate`. Cost-mod
 | Data | backward Dijkstra at scale, weight-vector sampling, label pipeline, dataset publication, node2vec | evaluation harness, heuristic-quality analysis, plots | Soujanya Lakshmi Tayyala, Chandana N |
 | Model | network architecture, ratio parameterisation, training loop, hyperparameter pass, checkpointing | generalisation on held-out weights, user study | Vinny Polamarasetty, Chaitanya Srikar Kastury |
 
-The weekly gates are tracked in [`docs/progress_log.md`](docs/progress_log.md). AI assistance is disclosed in
-[`docs/ai_usage_log.md`](docs/ai_usage_log.md). The project makes no novelty claim: its contribution is the
+The timeline and an honest reflection are in Section 6 of the report. AI assistance is disclosed in Section 7
+and in [`docs/ai_usage_log.md`](docs/ai_usage_log.md). The project makes no novelty claim: its contribution is the
 ground-truth-verified evaluation of preference-conditioned learned heuristics and Focal Search.
 
 ---

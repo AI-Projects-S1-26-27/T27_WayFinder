@@ -1,4 +1,4 @@
-"""Render docs/report/REPORT.md to docs/report/WayFinder_Report.pdf.
+"""Render docs/report/REPORT.md to docs/report/REPORT.pdf.
 
     python -m pip install markdown
     python scripts/build_report.py
@@ -20,7 +20,7 @@ ROOT = Path(__file__).resolve().parents[1]
 REPORT_DIR = ROOT / "docs" / "report"
 SOURCE = REPORT_DIR / "REPORT.md"
 BUILD = REPORT_DIR / "_build"
-PDF = REPORT_DIR / "WayFinder_Report.pdf"
+PDF = REPORT_DIR / "REPORT.pdf"
 
 BROWSERS = [
     r"C:\Program Files\Google\Chrome\Application\chrome.exe",
@@ -37,6 +37,7 @@ h1 { font-size: 22pt; margin: 0 0 4pt; color: #1b2a49; }
 h2 { font-size: 14.5pt; color: #1b2a49; border-bottom: 1px solid #c9ced8; padding-bottom: 3pt; margin-top: 20pt;
      page-break-after: avoid; }
 h3 { font-size: 11.5pt; color: #1b2a49; margin-top: 12pt; page-break-after: avoid; }
+h4 { font-size: 10.5pt; color: #1b2a49; margin: 10pt 0 4pt; page-break-after: avoid; }
 p, li { text-align: justify; }
 code { font-family: "Consolas", "Courier New", monospace; font-size: 9pt; background: #f3f4f6; padding: 0 2px; }
 pre { background: #f3f4f6; border: 1px solid #dfe3ea; padding: 7pt 9pt; font-size: 8.6pt; line-height: 1.35;

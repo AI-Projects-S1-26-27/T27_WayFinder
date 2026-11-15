@@ -35,7 +35,7 @@ fixes the interfaces the four pairs work against, and lists the order in which t
 | Web interface with five sliders on a map | `web/index.html`, `web/app.js`, `web/styles.css` |
 | User study (12 OD pairs × 3 profiles, unlabelled random order, agreement rate) | `src/wayfinder/study/user_study.py`, `web/study.html`, `web/study.js` |
 | Regression tests against exact optimal routes | `tests/` |
-| AI-usage log, weekly progress log | `docs/ai_usage_log.md`, `docs/progress_log.md` |
+| AI-usage log | `docs/ai_usage_log.md` |
 
 ## 2. Frozen interfaces (Week 1)
 
